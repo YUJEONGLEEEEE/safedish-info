@@ -27,7 +27,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 @media(max-width:520px){body{padding:0 16px 60px}h1{font-size:22px}th,td{padding:7px 9px}}
 </style></head><body><div class="wrap"><header><a class="back" href="./">← Mildio documents</a><h1>Privacy Policy</h1></header>
 
-<blockquote><p><strong>This revised policy takes effect on 2 November 2026.</strong> What changed: the Ministry of the Interior and Safety road-name address API server (<code>business.juso.go.kr</code>) has been added to the table in Section 10. To show addresses in English, the app sends the Korean address of the restaurant or place. It does not send your location or anything you enter, and what we collect and how we handle it stay the same. Until then, the <a href="./privacy-en-20261008.html">policy effective 8 October 2026</a> applies.</p></blockquote>
+<blockquote><p><strong>This revised policy takes effect on 4 December 2026.</strong> What changed: an optional camera permission has been added to Section 6, used to find product information by scanning the barcode or the nutrition and allergen labels on a processed food package. What the camera sees is read only inside the device and is neither saved nor transmitted; only the barcode digits read may be sent to the Public Data Portal API servers (reflected in the tables in Sections 1, 2, 10 and 13). The Operator still collects no personal information. Until then, the <a href="./privacy-en-20261102.html">policy effective 2 November 2026</a> applies.</p></blockquote>
 
 <blockquote><p><strong>About this translation.</strong> This is an English reference translation of the Korean privacy policy. The Service is operated from the Republic of Korea and the <a href="./privacy.html">Korean version</a> is the governing text; if the two differ, the Korean version prevails.</p></blockquote>
 
@@ -41,6 +41,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <tr><td>To show nearby restaurants and places</td><td>The current location determined by the device</td><td><strong>Inside the device</strong> (Section 6)</td></tr>
 <tr><td>To calculate a score against standards that suit the user</td><td>The health-related conditions the user selected</td><td><strong>Inside the device</strong> (Section 3)</td></tr>
 <tr><td>To show places the user saved</td><td>The favorites list</td><td><strong>Inside the device</strong> (Section 3)</td></tr>
+<tr><td>To find processed foods</td><td>Barcode digits and package text read with the camera</td><td><strong>Inside the device</strong> (Section 6)</td></tr>
 </tbody></table>
 <p>The Operator <strong>runs no server of its own</strong> for the Service. There is therefore no path by which a user's information could be received, stored, or read by the Operator.</p>
 
@@ -53,6 +54,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <tr><td>Account details (ID, password)</td><td>❌ There is no sign-up process at all</td></tr>
 <tr><td>Payment or card details</td><td>❌ The Service is free and has no payment feature</td></tr>
 <tr><td>Contacts, address book, photo library</td><td>❌ <strong>Not accessed</strong> (for profile photos see Sections 3 and 6)</td></tr>
+<tr><td>What the camera sees (photos or video)</td><td>❌ <strong>Neither saved nor transmitted</strong> — used only to read barcodes and text inside the device (Section 6)</td></tr>
 <tr><td>Advertising identifier (IDFA), device identifiers</td><td>❌ Not collected</td></tr>
 <tr><td>Usage records, access logs, behavioral analytics</td><td>❌ Not collected; no analytics SDK is embedded</td></tr>
 <tr><td><strong>The user's location</strong></td><td>❌ <strong>Not transmitted to the Operator</strong> (Section 6)</td></tr>
@@ -86,19 +88,21 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 </ul></li>
 </ol>
 
-<h2>6. Handling of location information</h2>
+<h2>6. Handling of location information and device permissions</h2>
 <ol>
 <li><strong>Purpose</strong>: used solely to show restaurants and places near the user.</li>
 <li><strong>How it is handled</strong>: the location determined by the device is <strong>used to compose the screen and then discarded</strong>. It is not sent to any server of the Operator and is not stored permanently on the device. <strong>The Service provides no feature that records travel routes or visit history.</strong></li>
 <li><strong>What leaves the device</strong>: to look up nearby information, a location must be sent to public open APIs. In doing so the Service uses <strong>approximate coordinates rounded to a fixed unit, not exact coordinates</strong>. Weather information is requested by <strong>a grid number covering a fixed area of the country</strong>, not by coordinates.</li>
 <li><strong>Consent and withdrawal</strong>: location permission is granted or refused by the user through the process provided by the operating system (iOS), and <strong>can be withdrawn at any time in device settings</strong>.</li>
-<li><strong>The permission is optional, not required.</strong> The Operator requests only the single device permission below.</li>
+<li><strong>Both permissions are optional, not required.</strong> The Operator requests only the two device permissions below.</li>
 </ol>
 <table><thead><tr><th>Permission</th><th>Type</th><th>Why it is needed</th><th>If not granted</th></tr></thead><tbody>
 <tr><td>Location</td><td><strong>Optional</strong></td><td>To show nearby restaurants and places ordered by distance</td><td>The user can <strong>select an area manually and use every feature</strong> as normal</td></tr>
+<tr><td>Camera</td><td><strong>Optional</strong></td><td>To find product information by scanning the barcode, or the nutrition and allergen labels, on a processed food package (requested only when that feature is first used)</td><td>The user can see the same information by <strong>typing the product name or barcode number</strong></td></tr>
 </tbody></table>
-<p>The Operator states the above on the permission request screen. <strong>No permission other than this one is requested</strong>, and the Service does not access contacts, the microphone, the camera, or the photo library.</p>
+<p>The Operator states the above on the permission request screen. <strong>No permission other than these two is requested</strong>, and the Service does not access contacts, the microphone, or the photo library.</p>
 <blockquote><p><strong>About profile photos</strong>: when a user sets a profile photo, the Service does not access the photo library. It receives <strong>only the single photo the user picks in the system-provided photo picker</strong>, and <strong>no separate permission is required</strong> for this. The photo received is stored on the device only (Section 3).</p></blockquote>
+<blockquote><p><strong>About the camera</strong>: the camera view is used <strong>only to read barcode digits and package text inside the device.</strong> What the camera sees is <strong>never saved as a photo or video and never transmitted.</strong> <strong>Only the barcode digits or product name</strong> that were read may be sent to the Public Data Portal API servers in Section 10 to look up the product. Camera permission can be withdrawn at any time in device settings.</p></blockquote>
 <ol start="6">
 <li><strong>Usable without granting permission</strong>: even if location access is not allowed, the user can <strong>select an area manually and use the Service</strong>.</li>
 <li>Because the Operator neither collects nor retains personal location information, nor provides it to third parties, no separate location-information terms or consent procedure under the Act on the Protection and Use of Location Information is established.</li>
@@ -125,7 +129,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <h2>10. Connections to external services</h2>
 <p>The Service connects to the external services below in order to display information. <strong>The Operator does not send any information that could identify a user in the course of doing so.</strong></p>
 <table><thead><tr><th>Destination</th><th>What is sent</th><th>Purpose</th></tr></thead><tbody>
-<tr><td>Public Data Portal API servers (<code>apis.data.go.kr</code>) — Korea Tourism Organization, Ministry of Food and Drug Safety, Small Enterprise and Market Service, Korea Meteorological Administration</td><td>Rounded approximate coordinates, search terms, the identifier of the item to look up</td><td>Looking up places, menus, nutrition data, and weather</td></tr>
+<tr><td>Public Data Portal API servers (<code>apis.data.go.kr</code>) — Korea Tourism Organization, Ministry of Food and Drug Safety, Small Enterprise and Market Service, Korea Meteorological Administration</td><td>Rounded approximate coordinates, search terms, the identifier of the item to look up, barcode digits of processed foods</td><td>Looking up places, menus, nutrition data, processed foods, and weather</td></tr>
 <tr>
 <td>Ministry of the Interior and Safety road-name address API server (<code>business.juso.go.kr</code>)</td>
 <td>The <strong>Korean address of the restaurant or place</strong> (only when using the app in English and opening its detail page)</td>
@@ -164,7 +168,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <tr><td>Access</td><td>View the stored values directly on the <code>My profile</code> screen in the app</td></tr>
 <tr><td>Correction</td><td>Change the nickname or date of birth on the <code>My profile</code> screen, or reselect the health-related conditions</td></tr>
 <tr><td>Deletion</td><td>Delete favorites individually, or <strong>delete the application</strong> (deletes everything)</td></tr>
-<tr><td>Suspension of processing</td><td>Revoke location permission in device settings, or delete the application</td></tr>
+<tr><td>Suspension of processing</td><td>Revoke location or camera permission in device settings, or delete the application</td></tr>
 </tbody></table>
 <ol start="3">
 <li>Because the Operator does not hold users' information, there is nothing held by the Operator to request the deletion of. <strong>Deleting it directly is the fastest and most certain method.</strong></li>
@@ -206,12 +210,13 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 </ol>
 
 <h2>Addendum</h2>
-<p>This policy takes effect on <strong>2 November 2026</strong>.</p>
+<p>This policy takes effect on <strong>4 December 2026</strong>.</p>
 <ul>
 <li>Established and effective 8 September 2026</li>
 <li>Revised and effective 8 October 2026: removed Section 10(3), the sentence about an external library, because the app no longer includes any. What we collect and how we handle it stay the same.</li>
 <li>Revised and effective 2 November 2026: added the Ministry of the Interior and Safety road-name address API server (<code>business.juso.go.kr</code>) to the table in Section 10. To show addresses in English, the app sends the Korean address of the restaurant or place. It does not send your location or anything you enter, and what we collect and how we handle it stay the same.</li>
-<li>Previous versions: <a href="./privacy-en-20261008.html">policy effective 8 October 2026</a>, <a href="./privacy-en-20260908.html">policy effective 8 September 2026</a></li>
+<li>Revised and effective 4 December 2026: added an optional camera permission to Section 6, used to find product information by scanning the barcode or the nutrition and allergen labels on a processed food package. What the camera sees is read only inside the device and is neither saved nor transmitted; only the barcode digits read may be sent to the Public Data Portal API servers (reflected in the tables in Sections 1, 2, 10 and 13). The Operator still collects no personal information.</li>
+<li>Previous versions: <a href="./privacy-en-20261102.html">policy effective 2 November 2026</a>, <a href="./privacy-en-20261008.html">policy effective 8 October 2026</a>, <a href="./privacy-en-20260908.html">policy effective 8 September 2026</a></li>
 </ul>
 
 <footer>Mildio (삼삼한상) · Contact aspynlee.dev@gmail.com · <a href="./privacy.html">한국어 원문</a></footer></div></body></html>
